@@ -1,4 +1,6 @@
 
+# Bubble sort, done by simply bubbling smaller elements up to the top
+
 def bubble_sort(arr):
     
     for i in range(len(arr)-1):
