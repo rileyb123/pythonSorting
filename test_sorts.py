@@ -4,6 +4,7 @@ from merge_sort import merge_sort
 from quick_sort import quick_sort
 from counting_sort import counting_sort
 from heap_sort import heap_sort
+from tree_sort import tree_sort
 
 class TestSorts:
 
@@ -75,3 +76,14 @@ class TestSorts:
         sorted_arr = []
         heap_sort(arr)
         assert heap_sort(arr) == sorted_arr , "arr did not match sorted array"
+
+    def test_tree_sort_basic(self):
+        arr = [1,4,8,2,7,5,6,4,5,9]
+        sorted_arr = [1,2,4,4,5,5,6,7,8,9]
+        assert tree_sort(arr) == sorted_arr , "arr did not match sorted array"
+
+    def test_tree_sort_empty(self):
+        arr = []
+        sorted_arr = []
+        tree_sort(arr)
+        assert tree_sort(arr) == sorted_arr , "arr did not match sorted array"
